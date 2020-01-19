@@ -1,3 +1,4 @@
+environs
 flask
 flask-marshmallow
 flask-migrate

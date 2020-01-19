@@ -1,3 +1,5 @@
-from project import app
+from project import app, config
+from project.config import ConfigFlask
 
-app.run(host='0.0.0.0', port=8080)
+# Run app
+app.run(host=ConfigFlask.HOST, port=ConfigFlask.PORT)
