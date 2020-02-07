@@ -21,3 +21,8 @@ ma = Marshmallow(app)
 # Establish migration path
 migrate_dir = ConfigDB.MIGRATION_PATH
 migrate = Migrate(app, db, directory=migrate_dir) if migrate_dir != '' else Migrate(app, db)
+
+# Register blueprints
+from project.blueprints.user_blueprint import user_blueprint
+
+app.register_blueprint(user_blueprint)
