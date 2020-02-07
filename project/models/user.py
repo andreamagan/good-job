@@ -28,8 +28,8 @@ class User(db.Model):
     creation_date = db.Column(DATETIME, default=datetime.utcnow, nullable=False)
     modification_date = db.Column(DATETIME, nullable=True)
     activation_date = db.Column(DATETIME, nullable=True)
-    removed_date = db.Column(DATETIME, nullable=True)
-    __table_args__ = UniqueConstraint('email', 'removed_date', name='UC_email')
+    removed_date = db.Column(DATETIME, default=datetime.min, nullable=False)
+    __table_args__ = (UniqueConstraint('email', 'removed_date', name='UC_email'),)
 
     def hash_password(self, clear_password):
         self.password_hash = pwd_context.hash(clear_password)

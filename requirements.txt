@@ -7,3 +7,4 @@ marshmallow-sqlalchemy
 marshmallow_enum
 pymysql
 passlib
+nose
