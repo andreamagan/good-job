@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -13,6 +14,9 @@ app.config.from_object(ConfigDB)
 
 # Create database connection
 db = SQLAlchemy(app)
+
+# Persists object as json
+ma = Marshmallow(app)
 
 # Establish migration path
 migrate_dir = ConfigDB.MIGRATION_PATH
