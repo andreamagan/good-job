@@ -24,6 +24,6 @@ class ConfigDB(object):
     # Track the object modifications (something like flush)
     SQLALCHEMY_TRACK_MODIFICATIONS = env.bool("DATABASE_TRACK_MODIFICATIONS")
     # Display the excuted queries to debug
-    SQLALCHEMY_ECHO = env.str("DATABASE_ECHO")
+    SQLALCHEMY_ECHO = env.bool("DATABASE_ECHO")
     # Where are the database migration scripts 
     MIGRATION_PATH = env.str("DATABASE_MIGRATION_PATH")
