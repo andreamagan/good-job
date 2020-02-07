@@ -4,3 +4,4 @@ migrations/**
 .pydevproject
 .env
 *.pyc
+.idea/
