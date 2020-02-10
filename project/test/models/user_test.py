@@ -77,5 +77,4 @@ class UserTest(TestCase):
             user = User(email='user1@goodjob.com', password_hash='klsdcsdjkj')
             db.session.add(user)
             db.session.flush()
-            print(user.removed_date)
 

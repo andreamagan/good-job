@@ -8,3 +8,5 @@ marshmallow_enum
 pymysql
 passlib
 nose
+flask-testing
+cryptography
